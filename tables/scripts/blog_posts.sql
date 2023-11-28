@@ -10,6 +10,7 @@ CREATE TABLE IF NOT EXISTS public.blog_posts
     post_id integer NOT NULL DEFAULT nextval('blog_posts_post_id_seq'::regclass),
     title character varying(255) COLLATE pg_catalog."default" NOT NULL,
     content text COLLATE pg_catalog."default",
+    desc_pro character varying(30),
     author_id integer,
     publish_date timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT blog_posts_pkey PRIMARY KEY (post_id),
